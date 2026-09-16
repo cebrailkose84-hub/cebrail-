@@ -1,0 +1,228 @@
+/* Genel Sıfırlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d0d0d; /* Kapkaranlık siyah arka plan */
+    color: #f5f5f5; /* Ana yazılar net beyaz/açık gri */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+/* Başlıklar ve Vurgular */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff2a2a; /* Canlı kırmızı başlıklar */
+    border-bottom: 2px solid #262626;
+    padding-bottom: 10px;
+}
+
+.highlight {
+    color: #ff2a2a; /* İsim vurgusu kırmızı */
+}
+
+/* Header & Nav */
+header {
+    background-color: #141414; /* Koyu gri/siyah bar */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #262626;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #ff2a2a; /* Kırmızı logo yazısı */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff2a2a; /* Menüye gelince kırmızı olma efekti */
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #a3a3a3;
+    margin-bottom: 20px;
+}
+
+/* Profil Fotoğrafı (Kırmızı Çerçeveli) */
+.profile-pic {
+    width: 320px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #ff2a2a; /* Kırmızı çerçeve */
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+/* Butonlar */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #ff2a2a; /* Kırmızı ana buton */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #d61c1c; /* Üstüne gelince koyulaşan kırmızı */
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #141414;
+    color: #f5f5f5;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #333333;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #262626;
+    border-color: #ff2a2a; /* Çerçevesi kırmızı olan ikincil buton */
+    color: #ff2a2a;
+}
+
+/* Proje Kartları */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #141414;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #262626;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff2a2a; /* Kartın üstüne gelince kırmızı parlayan çerçeve */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-card p {
+    color: #a3a3a3;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    color: #ff2a2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* İletişim & Footer */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #050505;
+    color: #666666;
+    font-size: 0.9rem;
+    border-top: 1px solid #1a1a1a;
+}.profile-pic {
+    width: 320px;          /* Resmi büyüttük */
+    height: auto;          /* Yüksekliği serbest bıraktık, resmin TAMAMI kırpılmadan görünür */
+    border-radius: 12px;   /* Kare / hafif kavisli köşe */
+    border: 3px solid #38bdf8;
+    display: block;
+    margin: 0 0 20px 0;    /* Sola hizalı tutar (Ortalamak istersen: 0 auto 20px auto yapabilirsin) */
+}/* Yukarı Çık Butonu */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #ff2a2a; /* Kırmızı tema rengi */
+    color: #ffffff;
+    text-align: center;
+    line-height: 42px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    background-color: #ffffff;
+    color: #ff2a2a;
+    transform: translateY(-5px); /* Üstüne gelince hafif yukarı zıplar */
+}
